@@ -1,0 +1,40 @@
+#root {
+  /* max-width: 1280px; */
+  width: 100%;
+}
+
+.initial-home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* @keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */

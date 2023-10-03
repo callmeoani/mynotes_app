@@ -1,0 +1,6 @@
+.container-overall {
+  width: 90%;
+  margin: 0 auto;
+  background-color: floralwhite;
+  flex-grow: 1;
+}
