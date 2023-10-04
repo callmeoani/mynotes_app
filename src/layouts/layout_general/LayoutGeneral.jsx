@@ -22,7 +22,7 @@ const LayoutGeneral = ({ children }) => {
 };
 
 LayoutGeneral.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.element,
 };
 
 export default LayoutGeneral;

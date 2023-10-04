@@ -11,6 +11,7 @@
 import "./NavbarPry.css";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { GoSearch } from "react-icons/go";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 const NavbarPry = () => {
   return (
@@ -33,23 +34,29 @@ const NavbarPry = () => {
           </section>
         </div>
         <div className="navbar-two">
-          <ul className="navbar-two-items ">
-            <li>
-              <button>Finished</button>
-            </li>
-            <li>
-              <button>Bookmarks</button>
-            </li>
-            <li>
-              <button>Add</button>
-            </li>
-            <li>
-              <button>Search</button>
-            </li>
-            <li>
-              <button>Settings</button>
-            </li>
-          </ul>
+          <div className="navbar-two-inner">
+            <ul className="navbar-two-items ">
+              <li>
+                <button className="nav-button">Finished</button>
+              </li>
+              <li>
+                <button className="nav-button">Bookmarks</button>
+              </li>
+
+              <li className="add-button-container">
+                <button className="nav-button add-button">
+                  <BsFillPlusCircleFill size={36} />
+                </button>
+              </li>
+
+              <li>
+                <button className="nav-button">Search</button>
+              </li>
+              <li>
+                <button className="nav-button">Settings</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

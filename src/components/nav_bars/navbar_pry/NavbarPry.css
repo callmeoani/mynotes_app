@@ -34,6 +34,21 @@
   margin: 0;
 }
 
+.nav-button {
+  border: none;
+  background: none;
+  background-color: none;
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .extra-nav-items {
   display: flex;
   align-items: center;
@@ -41,19 +56,58 @@
   gap: 24px;
 }
 
+.add-button-container {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  /* height: 70px; */
+  position: relative;
+}
+
+.add-button {
+  /* background-color: red; */
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -20px;
+}
+
 .navbar-two {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+  padding-bottom: 10px;
+  /* background-color: antiquewhite; */
+}
+.navbar-two-inner {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  justify-content: center;
+  width: 100%;
+  /* padding: 20px 0; */
+  padding-bottom: 0px;
+  background-color: aqua;
 }
 
 .navbar-two-items {
   list-style-type: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  background-color: antiquewhite;
+  flex: 1;
+  width: 100%;
 }
 
 .navbar-two-items li {

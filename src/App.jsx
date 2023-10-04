@@ -30,7 +30,9 @@ function App() {
         <p>
           Note-Ta<span>king App</span>
         </p>
-        <button onClick={handleContinueClick}>Continue</button>
+        <button onClick={handleContinueClick} className="button">
+          Continue
+        </button>
       </div>
     );
   };
@@ -53,6 +55,7 @@ function App() {
                   and start your journey!
                 </p>
               </div>
+              <button className="button">Get Started</button>
             </div>
           </div>
         </LayoutGeneral>

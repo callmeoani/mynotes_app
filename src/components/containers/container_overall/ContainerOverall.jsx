@@ -15,7 +15,7 @@ const ContainerOverall = ({ children }) => {
 };
 
 ContainerOverall.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.element,
 };
 
 export default ContainerOverall;
