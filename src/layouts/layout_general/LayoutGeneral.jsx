@@ -1,5 +1,5 @@
 // ==============|| PACKAGES IMPORTS ||==================
-import PropTypes from "prop-types";
+import { Outlet } from "react-router-dom";
 
 // ==============|| IMAGES IMPORTS ||==================
 
@@ -8,21 +8,16 @@ import PropTypes from "prop-types";
 // ==============|| HOOKS IMPORTS ||==================
 
 // ==============|| COMPONENTS IMPORTS ||==================
-import ContainerOverall from "../../components/containers/container_overall/ContainerOverall";
 import NavbarPry from "../../components/nav_bars/navbar_pry/NavbarPry";
 import "./LayoutGeneral.css";
 
-const LayoutGeneral = ({ children }) => {
+const LayoutGeneral = () => {
   return (
     <div className="layout-general">
       <NavbarPry />
-      <ContainerOverall>{children}</ContainerOverall>
+      <Outlet />
     </div>
   );
-};
-
-LayoutGeneral.propTypes = {
-  children: PropTypes.element,
 };
 
 export default LayoutGeneral;
