@@ -1,5 +1,5 @@
 .selectModal {
-  background-color: red;
+  /* background-color: red; */
   padding: 20px;
 }
 
@@ -8,12 +8,22 @@ ul {
 }
 
 /* ============= */
+
 .all-noteTypes {
   display: flex;
   flex-direction: column;
+
   list-style-type: none;
 }
 
 .noteType-li {
   cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.selectModal .text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: black;
 }

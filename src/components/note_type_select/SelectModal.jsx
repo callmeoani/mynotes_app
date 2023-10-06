@@ -58,7 +58,7 @@ const SelectModal = ({ open, setOpen }) => {
   return (
     <Modal openModal={open} setOpenModal={setOpen}>
       <div className="selectModal">
-        <p>What Do You Want to Notes?</p>
+        <p className="text">What Do You Want to Notes?</p>
 
         <ul className="all-noteTypes">
           {noteTypes.map((noteType, index) => (

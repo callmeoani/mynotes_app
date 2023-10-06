@@ -16,11 +16,11 @@
 
 .children-container {
   /* width: 80%; */
-  background-color: green;
+  background-color: white;
   /* margin: 0 auto; */
 }
 .modal-main {
-  background-color: purple;
+  background-color: white;
   border-radius: 20px;
   padding: 30px;
   width: 80%;

@@ -34,9 +34,6 @@ const Testing = () => {
       >
         Open modal
       </button>
-      {/* <Modal openModal={openModal} setOpenModal={setOpenModal}>
-        <div>What Do You Want to Notes?</div>
-      </Modal> */}
       <SelectModal open={openModal} setOpen={setOpenModal} />
     </div>
   );
