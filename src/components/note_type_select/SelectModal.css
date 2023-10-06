@@ -1,0 +1,19 @@
+.selectModal {
+  background-color: red;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ============= */
+.all-noteTypes {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.noteType-li {
+  cursor: pointer;
+}

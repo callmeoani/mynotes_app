@@ -17,8 +17,8 @@ const NoteTypeSelect = ({ bgClr, image, title, description }) => {
         <img src={image} alt="" className="image" />
       </div>
       <div className="nts-texts-part">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <p className="nts-title">{title}</p>
+        <p className=" nts-description">{description}</p>
       </div>
     </div>
   );
