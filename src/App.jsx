@@ -15,6 +15,7 @@ import NoMatch from "./pages/no_match/NoMatch";
 import LayoutGeneral from "./layouts/layout_general/LayoutGeneral";
 import Blogs from "./pages/blogs/Blogs";
 import Testing from "./pages/testing/Testing";
+import NewNote from "./pages/new_note/NewNote";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="blogs" element={<Blogs />} />
+          <Route path="new-note" element={<NewNote />} />
           <Route path="testing" element={<Testing />} />
           {/* <Route path="dashboard" element={<Dashboard />} /> */}
 

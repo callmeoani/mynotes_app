@@ -1,5 +1,5 @@
 // ==============|| PACKAGES IMPORTS ||==================
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // ==============|| IMAGES IMPORTS ||==================
 import homeLogo from "../../assets/images/svg/home_logo.svg";

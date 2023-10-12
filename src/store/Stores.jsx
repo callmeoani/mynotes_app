@@ -7,7 +7,7 @@ export const useAddNewNoteModal = create((set) => ({
 
 export const useAllNotes = create((set) => ({
   allNotes: [],
-  // updateIsOpen: (isOpen) => set(() => ({ isOpen: isOpen })),
+  updateAllNotes: (allNotes) => set(() => ({ allNotes: allNotes })),
 }));
 
 export const useCurrentNavTab = create((set) => ({
