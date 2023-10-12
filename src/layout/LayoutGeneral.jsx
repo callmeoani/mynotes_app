@@ -9,17 +9,14 @@ import { Outlet } from "react-router-dom";
 // ==============|| HOOKS IMPORTS ||==================
 
 // ==============|| COMPONENTS IMPORTS ||==================
-import NavbarPry from "../../components/nav_bars/navbar_pry/NavbarPry";
+import NavbarPry from "../components/nav_bars/navbar_pry/NavbarPry";
 import "./LayoutGeneral.css";
-import SelectModal from "../../components/note_type_select/SelectModal";
-import { useAddNewNoteModal } from "../../store/Stores";
+import SelectModal from "../components/note_type_select/SelectModal";
+import { useAddNewNoteModal } from "../store/Stores";
 
 const LayoutGeneral = () => {
   const openSelectModal = useAddNewNoteModal((state) => state.isOpen);
   const setOpenSelectModal = useAddNewNoteModal((state) => state.updateIsOpen);
-
-  // const noteType = useNoteType((state) => state.noteType);
-  // console.log("this is the note type selected: ", noteType);
 
   return (
     <div className="layout-general">
