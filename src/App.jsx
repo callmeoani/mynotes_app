@@ -10,13 +10,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // ==============|| COMPONENTS IMPORTS ||==================
 import "./App.css";
-import Home from "./pages/home/Home";
+import Home, { loader as homeLoader } from "./pages/home/Home";
 import About from "./pages/about/About";
 import NoMatch from "./pages/no_match/NoMatch";
 import LayoutGeneral from "./layout/LayoutGeneral";
 import Blogs from "./pages/blogs/Blogs";
 import Testing from "./pages/testing/Testing";
-import NewNote from "./pages/new_note/NewNote";
+import NewNote, { action as newNoteAction } from "./pages/new_note/NewNote";
+import Note, {
+  loader as noteLoader,
+  action as noteAction,
+} from "./pages/note/Note";
 
 let router = createBrowserRouter([
   {
@@ -26,6 +30,7 @@ let router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: homeLoader,
       },
       {
         path: "about",
@@ -38,6 +43,14 @@ let router = createBrowserRouter([
       {
         path: "new",
         element: <NewNote />,
+        action: newNoteAction,
+      },
+      {
+        path: "/note/:noteId",
+        element: <Note />,
+        loader: noteLoader,
+        action: noteAction,
+        errorElement: <h2>Note not found</h2>,
       },
       {
         path: "testing",
@@ -57,21 +70,6 @@ if (import.meta.hot) {
 
 function App() {
   return <RouterProvider router={router} />;
-  // return (
-  //   <>
-  //     <Routes>
-  //       <Route path="/" element={<LayoutGeneral />}>
-  //         <Route index element={<Home />} />
-  //         <Route path="about" element={<About />} />
-  //         <Route path="blogs" element={<Blogs />} />
-  //         <Route path="new-note" element={<NewNote />} />
-  //         <Route path="testing" element={<Testing />} />
-
-  //         <Route path="*" element={<NoMatch />} />
-  //       </Route>
-  //     </Routes>
-  //   </>
-  // );
 }
 
 export default App;

@@ -1,5 +1,6 @@
 // ==============|| PACKAGES IMPORTS ||==================
 import { useEffect } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 
 // ==============|| IMAGES IMPORTS ||==================
 import homeLogo from "../../assets/images/svg/home_logo.svg";
@@ -13,10 +14,16 @@ import startingIllustration from "../../assets/images/png/starting_illustration.
 import "./Home.css";
 import {
   useAddNewNoteModal,
-  useAllNotes,
+  // useAllNotes,
   useHomeDisplayState,
 } from "../../store/Stores";
+import { getNotes } from "../../utilities/notes";
+
 // import { useCurrentNavTab } from "../../store/Stores";
+
+export async function loader() {
+  return getNotes();
+}
 
 function Home() {
   // const currentTab = useCurrentNavTab((state) => state.tabValue);
@@ -26,17 +33,18 @@ function Home() {
     (state) => state.updateDisplayState
   );
 
-  const allNotes = useAllNotes((state) => state.allNotes);
+  // const allNotes = useAllNotes((state) => state.allNotes);
+  const notes = useLoaderData();
 
   useEffect(() => {
     setTimeout(() => {
-      allNotes[0]
+      notes[0]
         ? setHomeDisplayState("notes_exist")
         : setHomeDisplayState("no_note");
     }, 3000);
   }, [homeDisplayState]);
 
-  console.log("the displayState: ", homeDisplayState);
+  // console.log("the displayState: ", homeDisplayState);
 
   // =======================================================
   // ====================|| INITIAL-LOADING-SCREEN STARTS ||=============================
@@ -80,7 +88,18 @@ function Home() {
               </button>
             </div>
           ) : (
-            <div>Notes exist here</div>
+            <div>
+              <h2>Existing Notes</h2>
+              <div>
+                <ul>
+                  {notes.map((note) => (
+                    <li key={note.id}>
+                      <Link to={`/note/${note.id}`}>{note.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           )}
         </div>
       )}

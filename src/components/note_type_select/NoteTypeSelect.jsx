@@ -1,5 +1,6 @@
 // ==============|| PACKAGES IMPORTS ||==================
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 // ==============|| IMAGES IMPORTS ||==================
 
@@ -14,12 +15,17 @@ import { useAddNewNoteModal, useNoteType } from "../../store/Stores";
 const NoteTypeSelect = ({ bgClr, image, title, description, type }) => {
   const setNoteType = useNoteType((state) => state.updateSelectedNote);
   const setOpenSelectModal = useAddNewNoteModal((state) => state.updateIsOpen);
+
+  const navigate = useNavigate();
+
+  const handleClick = (type) => {
+    setNoteType(type);
+    setOpenSelectModal(false);
+    navigate("/new");
+  };
   return (
     <div
-      onClick={() => {
-        setNoteType(type);
-        setOpenSelectModal(false);
-      }}
+      onClick={() => handleClick(type)}
       className="NoteTypeSelect"
       style={{ backgroundColor: `${bgClr}` }}
     >
