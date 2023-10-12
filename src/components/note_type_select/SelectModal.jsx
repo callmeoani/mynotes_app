@@ -68,6 +68,7 @@ const SelectModal = ({ open, setOpen }) => {
                 title={noteType.title}
                 description={noteType.description}
                 image={noteType.image}
+                type={noteType.type}
               />
             </li>
           ))}

@@ -15,8 +15,11 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 
 // ============== || COMPONENTS IMPORTS || ==================
 import "./NavbarPry.css";
+import { useAddNewNoteModal } from "../../../store/Stores";
+// import SelectModal from "../../note_type_select/SelectModal";
 
 const NavbarPry = () => {
+  const setOpenSelectModal = useAddNewNoteModal((state) => state.updateIsOpen);
   return (
     <>
       <div className="navbar-container">
@@ -55,7 +58,12 @@ const NavbarPry = () => {
               </li>
 
               <li className="add-button-container">
-                <button className="nav-button add-button">
+                <button
+                  onClick={() => {
+                    setOpenSelectModal(true);
+                  }}
+                  className="nav-button add-button"
+                >
                   <BsFillPlusCircleFill size={36} />
                 </button>
               </li>
@@ -70,6 +78,7 @@ const NavbarPry = () => {
           </div>
         </div>
       </div>
+      {/* <SelectModal open={openSelectModal} setOpen={setOpenSelectModal} /> */}
     </>
   );
 };
